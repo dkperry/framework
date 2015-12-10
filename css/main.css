@@ -9,15 +9,19 @@
 	box-sizing: border-box;
 
 	font-family: 'Playfair Display', serif;
+	text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
-	#logoDiv, #photoDiv {
+	#logoDiv {
 		display: none;
-	}
-
-	#nameDiv, #introDiv {
+	} 
+	#nameDiv {
 		width: 100%;
+		order 2;
+	}
+	#photoDiv {
+		//display: none;
 	}
 
 	* {
@@ -31,15 +35,46 @@
 	}
 }
 
+@media only screen and (max-width: 750px) {
+	#introDiv {
+		width: 100%;
+		order: 0;
+	}
+	#photoDiv {
+		width: 100%;
+		order: 1;
+	}
+	.myPhoto {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.pro.col-4 {
+		width: 100%;
+		order: 2;
+	}
+	.ed.col-4 {
+		width: 100%;
+		order: 3;
+	}
+	.hobby.col-4 {
+		width: 100%;
+		order: 4;
+	}
+}
+
 .grid {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
 }
 
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .row {
     width: 100%;
-    margin-bottom: 20px;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -103,11 +138,13 @@ p {
 }
 
 #headRow {
-	border-top: 1px solid #bbb !important;
+	
 }
 
 .logo {
-	//margin: 10px;
+	margin: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 10px;
 	max-width: 100%;
 	height: auto;
 	display: block;
@@ -124,35 +161,46 @@ p {
 	text-align: right;
 }
 
+.horizRule {
+	font-weight: 700;
+	color: #333;
+	margin: 0px;
+	padding: 0px;
+}
+
 .navMenu {
-	margin: 10px;
+	margin: 5px;
 	text-align: right;
-	//background-color: #ccc;
 	padding-right: 10px;
-	border-top: 1px solid #bbb !important;
-	border-bottom: 1px solid #bbb !important;
+	padding-bottom: 0px;
 }
 
 .navMenu a {
 	text-decoration: none;
 	color: #333333;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	min-width: 48px;
+	min-height: 48px;
 }
 
 .myPhoto {
-	//margin: 10px;
 	max-width: 100%;
+	margin: 10px;
 	height: auto;
 	display: block;
 }
 
 .introTitle {
 	margin: 10px;
-	font-family: 'Playfair Display', serif;
+}
+
+.intro {
+	
 }
 
 .sectionTitle {
 	margin: 10px;
-	font-family: 'Playfair Display', serif;
 
 }
 
