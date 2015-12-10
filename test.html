@@ -4,12 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daniel Perry</title>
-  <link href="css/main.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <title>Daniel Perry</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+
+        $('#burgerMenu').click(function() {
+          $('#drawer').prop("-webkit-transform", "translate(0, 0)").prop(transform: translate(0,0));
+        });
+      });
+    </script>
+
+
   </head>
   <body>
-  <div class="grid">
+    <nav id="drawer" class="blue">
+      <ul class="nav_list">
+        <li class="nav_item">example</li>
+      </ul>
+    </nav>
+    <div class="grid">
       <div>
         <hr class="horizRule">
       </div>
@@ -20,6 +37,9 @@
         <div id="nameDiv" class="col-10">
           <h1 class="myName">DANIEL PERRY</h1>
           <p class="myTitle">Software &amp; Web Developer</p>
+        </div>
+        <div id="burgerMenu" class="col-2">
+          <img class="burgerIcon" src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-plain/422/06_menu_stack-128.png" alt="HB">
         </div>
       </div>
       <div>
@@ -66,5 +86,22 @@
         <div class="col-3-right">3 Columns</div>
       </div>
   </div>
+  <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var burgerIcon = document.querySelector('.burgerIcon');
+      var main = document.querySelector('grid');
+      var drawer = document.querySelector('.blue');
+
+      burgerIcon.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
   </body>
 </html>

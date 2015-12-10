@@ -13,15 +13,19 @@
 }
 
 @media only screen and (max-width: 500px) {
-	#logoDiv {
-		display: none;
+	html, body, grid {
+		height: 100%;
+		width: 100%;
+	}
+	#burgerMenu {
+		display: block !important;
 	} 
 	#nameDiv {
-		width: 100%;
-		order 2;
+		width: 66.66%;
+		text-align: center;
 	}
-	#photoDiv {
-		//display: none;
+	#navRow {
+		display: none;
 	}
 
 	* {
@@ -60,6 +64,21 @@
 		width: 100%;
 		order: 4;
 	}
+}
+
+#drawer {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	background-color: blue;
+	-webkit-transform: translate(-250px, 0);
+	transform: translate(-250px, 0);
+	transition: transfrom 0.3s ease;
+}
+
+#drawer.open {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0,0);
 }
 
 .grid {
@@ -137,10 +156,6 @@ p {
 	margin: 10px;
 }
 
-#headRow {
-	
-}
-
 .logo {
 	margin: 10px;
 	margin-bottom: 0px;
@@ -159,6 +174,16 @@ p {
 
 .myTitle {
 	text-align: right;
+}
+
+#burgerMenu {
+	display: none;
+	margin-top: 10px;
+}
+
+.burgerIcon {
+	width: 30px;
+	height: auto;
 }
 
 .horizRule {
