@@ -70,7 +70,9 @@
 	width: 250px;
 	height: 250px;
 	position: absolute;
-	background-color: blue;
+    background-color: #555;
+    border: 2px solid #ccc;
+    opacity: .9;
 	-webkit-transform: translate(-250px, 0);
 	transform: translate(-250px, 0);
 	transition: transfrom 0.3s ease;
@@ -79,6 +81,35 @@
 #drawer.open {
 	-webkit-transform: translate(0, 0);
 	transform: translate(0,0);
+}
+
+.nav_list {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav_item {
+    //margin-bottom: 0px;
+    //padding-bottom: 0px;
+    height: 33%;
+    width: 100%;
+    display: table;
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid {

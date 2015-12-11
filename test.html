@@ -21,9 +21,19 @@
 
   </head>
   <body>
-    <nav id="drawer" class="blue">
+    <nav id="drawer" class="nav_drawer">
       <ul class="nav_list">
-        <li class="nav_item">example</li>
+        <li class="nav_item">
+          <a href="index.html">Home</a>
+        </li>
+        <hr class="horizRule">
+        <li class="nav_item">
+          <a href="professional.html">Professional</a>
+        </li>
+        <hr class="horizRule">
+        <li class="nav_item">
+          <a href="contact.html">Contact</a>
+        </li>
       </ul>
     </nav>
     <div class="grid">
@@ -92,7 +102,7 @@
        */
       var burgerIcon = document.querySelector('.burgerIcon');
       var main = document.querySelector('grid');
-      var drawer = document.querySelector('.blue');
+      var drawer = document.querySelector('.nav_drawer');
 
       burgerIcon.addEventListener('click', function(e) {
         drawer.classList.toggle('open');
