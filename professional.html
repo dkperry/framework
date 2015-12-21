@@ -1,16 +1,111 @@
 <html>
-  <head lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daniel Perry</title>
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="row">
-      <h1>Professional Experience and Projects - Currently Under Construction</h1>
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Daniel Perry</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+                            $(document).ready(function() {
+                            
+                            
+                            $('#burgerMenu').click(function() {
+                            $('#drawer').prop("-webkit-transform", "translate(0, 0)").prop(transform: translate(0,0));
+                            });
+                            });
+                            </script>
+                            
+                            
+                            </head>
+                            <body>
+                            <nav id="drawer" class="nav_drawer">
+                            <ul class="nav_list">
+                            <li class="nav_item">
+                            <a href="index.html">Home</a>
+                            </li>
+                            <li class="nav_item">
+                            <a href="professional.html">Professional</a>
+                            </li>
+                            <li class="nav_item">
+                            <a href="contact.html">Contact</a>
+                            </li>
+                            </ul>
+                            </nav>
+                            <div class="grid">
+                            <div>
+                            <hr class="horizRule">
+                            </div>
+                            <div id="headRow" class="row">
+                            <div id="logoDiv" class="col-2">
+                            <img class="logo" src="http://www.placehold.it/75X75" alt="logo" />
+                            </div>
+                            <div id="nameDiv" class="col-10">
+                            <h1 class="myName">DANIEL PERRY</h1>
+                            <p class="myTitle">Software &amp; Web Developer</p>
+                            </div>
+                            <div id="burgerMenu" class="col-2">
+                            <img class="burgerIcon" src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-plain/422/06_menu_stack-128.png" alt="HB">
+                            </div>
+                            </div>
+                            <div>
+                            <hr class="horizRule">
+                            </div>
+                            <div id="navRow" class="row">
+                            <div class="col-12">
+                            <nav class="navMenu">
+                            <a href="index.html">Home</a> |
+                            <a href="professional.html">Professional</a> |
+                            <a href="contact.html">Contact</a>
+                            </nav>
+                            </div>
+                            </div>
+                            <div>
+                            <hr class="horizRule">
+                            </div><div class="row">
+      <h2>Professional Experience and Projects - Currently Under Construction</h2>
     </div>
+    <div id="footRow" class="row">
+    <div class="col-3">
+    <p>Written By: <br />
+    Daniel K Perry
+    </p>
+    </div>
+    <div class="col-6">
+    <nav>
+    <ul class="nav_list_">
+    <li class="nav_item_footer"><a href="index.html">Home</a></li>
+    <li class="nav_item_footer"><a href="professional.html">Professional</a></li>
+    <li class="nav_item_footer"><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+    </div>
+    <div class="col-3-right">
+    <address>
+    Daniel Perry <br />
+    Nashville, TN <br />
+    (615) 779-6704 <br />
+    <email>dkperry21@gmail.com</email>
+    </address>
+    </div>
+    </div>
+    <script>
+    /*
+    * Open the drawer when the menu ison is clicked.
+    */
+    var burgerIcon = document.querySelector('.burgerIcon');
+    var main = document.querySelector('grid');
+    var drawer = document.querySelector('.nav_drawer');
+    
+    burgerIcon.addEventListener('click', function(e) {
+    drawer.classList.toggle('open');
+    e.stopPropagation();
+    });
+    main.addEventListener('click', function() {
+    drawer.classList.remove('open');
+    });
+    
+    </script>
   </body>
 </html>
